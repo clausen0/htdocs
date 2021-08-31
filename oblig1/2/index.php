@@ -6,8 +6,11 @@
 </head>
 <body>
     <p id=back><a href= "../index.php">Tilbake</a></p> <!--dette er en komentar-->
+    <p>komentareksempel</p>
+    <img src="../../img/komentar.png">
     <p><b>dette er fetskrift</b><i>dette er kursiv</i><s>dette kan du så vidt se</s></p>
-    <a href="email:sanderc@viken.no">Personlig Email</a>
+    <img src="../../img/DifSkrift.png">
+    <p><a href="email:sanderc@viken.no">Personlig Email</a></p>
     <a href="http://www.vg.no"><img src="../../img/vg.png" widht="80" height="80" alt="vg" /> </a>
     <ul>
         <li>land
@@ -18,7 +21,6 @@
             </ul>
         </li>
     </ul>
-
     <table border="2">
         <thead>
             <tr>

@@ -2,13 +2,16 @@
 <html>
     <head>
         <title>oblig1 oppgave samling</title>
+        <link rel="stylesheet" href="../ForsideStyle.css">
     </head>
     <body>
-
-        <p><a href="../index.php">hovedMeny</a></p>
+        <ul>
+            <li><a class="active" href="../index.php">Forside</a></li>
+            <li><a href="../index.php">tilbake</a></li>
+        </ul>
         <p><a href="1/index.php">Oppgave 1</a></p>
         <p><a href="2/index.php">Oppgave 2</a></p>
         <p><a href="4/internt.php">Oppgave 4</a></p>
-
+        <p><a href="5/inline.php">Oppgave 5</a></p>
     </body>
 </html>

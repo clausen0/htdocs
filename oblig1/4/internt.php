@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>oppgave 4</title>
+    <title>Internal styling</title>
+    <link href="../style.css">
     <style>
-        
+        h1{
+            text-align: center;
+            font-family: "Courier New", Courier, monospace;
+        }
     </style>
 </head>
 <body>
-     <h1>Internt stylesheet</h1>
-     <p><a href="https://www.w3schools.com/"><img src="../../img/w3logo.jpg" widht="160" height="160" alt="w3school" /> </a></p>
+<p id=back><a href= "../index.php">Tilbake</a></p>
+    <h1>Dette er skrevet med intern styling</h1>
+    <h2>Dette er stylingen som styler hovedoverskriften på siden</h2>
+    <img src= ../../img/InlineOverskrift.png>
 </body>
 </html>
