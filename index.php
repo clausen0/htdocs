@@ -13,5 +13,6 @@
             <li><a class="active" href="index.php">Forside</a></li>
         </ul>
         <p><a href="oblig1/index.php">Oblig1</a></p>
+        <p><a href="oblig2/index.php">Oblig2</a></p>
     </body>
 </html>
