@@ -19,9 +19,9 @@
          <?php
             //Ta imot det som bruker sender inn - lagre i php-variabler
             if (isset($_POST["navn"]) && isset($_POST["height"]) && isset($_POST["weight"]) && isset($_POST["gender"])){
-                $navn = $_POST["navn"]; echo $navn;
-                $hoyde = $_POST["height"]; echo $navn;
-                $vekt = $_POST["weight"]; echo $navn;
+                $navn = $_POST["navn"]; 
+                $hoyde = $_POST["height"]; 
+                $vekt = $_POST["weight"]; 
                 
             $heightInMs = $hoyde/100;
 
@@ -31,6 +31,15 @@
             //Sjekke kjønn 
 
             //Deretter sjekke bmi og skrive riktig melding
+            if ($bmi < 17){
+                echo "$navn, du må spise mer mat";
+            }
+            elseif($bmi >= 17 && $bmi <25){
+                echo "$navn, du fungerer";
+            }
+            else{
+                echo "$navn, du burde gå ned litt på fastfooden";
+            }
 
 
 
