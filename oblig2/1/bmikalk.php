@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Document</title>
+        <title>BMI kalkulator</title>
+        <link rel="stylesheet" href="bmistyle.css">
     </head>
     <body>
-        <li><a class="active" href="../index.php">Forside</a></li>
-            <form method="POST">
-                <input type="text" name="navn"> navn: <br>
-                <input type="number" name="height"> høyde: <br>
-                <input type="number" name="weight"> vekt: <br><br>
-                Kjønn:
-                    <input type="radio" name="gender" value="female">Kvinne
-                    <input type="radio" name="gender" value="male">Mann
-                    <input type="radio" name="gender" value="other">Annet<br>
-                <input type="submit">
-            </form>
+        <h1>BMI kalkulator</h1>
+        <form action="index.php" method="post">
+            <p>Hva heter du?</p>
+            <input type="text" name="name"><br>
+            <p>Hvor høy er du i cm?</p>
+            <input type="text" name="height"><br>
+            
+            <p>Hvor mye veier du i kg?</p>
+            <input type="text" name="weight"><br>
+            <p>Er du mann eller dame?</p>
+            <input type="radio" name="gender" value="male">Mann<br>
+            <input type="radio" name="gender" value="female">Dame<br><br>
+            <input type="submit" value="Send inn">
+            <input type="reset" value="Reset">
+        </form>
 
-         <?php
-            //Ta imot det som bruker sender inn - lagre i php-variabler
-            if (isset($_POST["navn"]) && isset($_POST["height"]) && isset($_POST["weight"]) && isset($_POST["gender"])){
-                $navn = $_POST["navn"]; 
-                $hoyde = $_POST["height"]; 
-                $vekt = $_POST["weight"]; 
-                
-            $heightInMs = $hoyde/100;
+        <?php
+            if (empty($_POST["name"]) && empty($_POST["height"]) && empty($_POST["weight"]) && empty($_POST["gender"])) return;
+            $navn = $_POST["name"];
+            $hoyde = $_POST["height"];
+            $vekt = $_POST["weight"];
+            $kjonn = $_POST["gender"];
+            $hoydeIMS = $hoyde/100;
+            $bmi = $vekt/($hoydeIMS*$hoydeIMS);
 
-            //Beregne bmi med korrekt formel
-            $bmi =  $vekt/($heightInMs*$heightInMs);
-
-            //Sjekke kjønn 
-
-            //Deretter sjekke bmi og skrive riktig melding
             if ($bmi < 17){
-                echo "$navn, du må spise mer mat";
+                echo "$navn, du er tynn"; 
             }
-            elseif($bmi >= 17 && $bmi <25){
-                echo "$navn, du fungerer";
+            elseif($bmi >= 17 && $bmi<25){
+                echo "$navn, du er fin";
             }
             else{
-                echo "$navn, du burde gå ned litt på fastfooden";
+                echo "$navn, du er overvektig";
             }
-
-
-
-            }
-         ?>
+        ?>
     </body>
 </html>
