@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <title>Document</title>
-    <link rel="stylesheet" href="../../ForsideStyle.css" href="style.css">
+    <link rel="stylesheet" href="../../ForsideStyle.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <ul>
         <li><a class="active" href="../../index.php">Forside</a></li>
         <li><a href="../index.php">tilbake</a></li>
     </ul>
-    <ol>
+    <ol class="main">
         <li>Oppgave 1 (Variabler : $a = 3 og $b = 5)</li><br>
-        <ol>
+        <ol class="second">
             <li>true ($a < $b)</li><br>
             <li>false ($a >= $b)</li><br>
             <li>false ($a == $b)</li><br>

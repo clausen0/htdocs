@@ -14,6 +14,6 @@
         </ul>
         <p><a href="oblig1/index.php">Oblig1</a></p>
         <p><a href="oblig2/index.php">Oblig2</a></p>
-        <p><a href="oblig3/index.php">oblig3</a></p>
+        <p><a href="oblig3/index.php">Oblig3</a></p>
     </body>
 </html>
