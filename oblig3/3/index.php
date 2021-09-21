@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="../../index.php">Forside</a></li>
-        <li><a href="../index.php">tilbake</a></li>
+    <ul class="navbar">
+        <li class="navbar-item"><a class="active" href="../../index.php">Forside</a></li>
+        <li class="navbar-item"><a href="../index.php">tilbake</a></li>
     </ul>
     <table border="2">
         <thead>

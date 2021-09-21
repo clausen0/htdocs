@@ -9,8 +9,8 @@
          <h2>Sander sin nettside</h2>
         </div>
 
-        <ul>
-            <li><a class="active" href="index.php">Forside</a></li>
+        <ul class="navbar">
+            <li class="navbar-item"><a class="active" href="index.php">Forside</a></li>
         </ul>
         <p><a href="oblig1/index.php">Oblig1</a></p>
         <p><a href="oblig2/index.php">Oblig2</a></p>

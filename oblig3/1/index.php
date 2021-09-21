@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="../../index.php">Forside</a></li>
-        <li><a href="../index.php">tilbake</a></li>
+    <ul class="navbar">
+        <li class="navbar-item"><a class="active" href="../../index.php">Forside</a></li>
+        <li class="navbar-item"><a href="../index.php">tilbake</a></li>
     </ul>
     <ol class="main">
         <li>Oppgave 1 (Variabler : $a = 3 og $b = 5)</li><br>
