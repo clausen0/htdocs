@@ -1,46 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Document</title>
-        <link rel="stylesheet" href="../../ForsideStyle.css">
-    </head>
-    <body>
-        <ul>
-            <li><a class="active" href="../../index.php">Forside</a></li>
-            <li><a class="active" href="../index.php">Tilbake</a></li>
-        </ul>
-        <?php
-           $ArrayGen = array();
-           
-
-            for($x = 0; $x < 100; $x++){ 
-                $ArrayGen[$x] = rand(0, 1000);
-                // echo $ArrayGen[$x]."<br>";
-            };
-            
-            $HighestNumber=$ArrayGen[0];
-            $LowestNumber=$ArrayGen[0];
-            $counter = 0;
-
-            for($i=0; $i <= count($ArrayGen) -1 ; $i++){
-                if ($HighestNumber < $ArrayGen[$i]){
-                    $HighestNumber = $ArrayGen[$i];
-                }
-                if ($LowestNumber > $ArrayGen[$i]){
-                    $LowestNumber = $ArrayGen[$i];
-                }
-                if($ArrayGen[$i] < 499){
-                    $counter++;
-                }
-            }  
-            echo $HighestNumber. "<br>";
-            echo $LowestNumber. "<br>";
-            echo $counter;
-
-
-
-
-
-        ?>
-    </body>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../ForsideStyle.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li class="navbar-item"><a class="active" href="../index.php">Forside</a></li>
+        <li class="navbar-item"><a href="../index.php">tilbake</a></li>
+    </ul>
+        <p><a href="1/index.php">Oppgave 1</a></p>
+        <p><a href="2/index.php">Oppgave 2</a></p>
+        <p><a href="3/index.php">Oppgave 3</a></p>
+        <p><a href="4/index.php">Oppgave 4</a></p>
+        <p><a href="5/index5.php">Oppgave 5</a></p>
+        <p><a href="6/index6.php">Oppgave 6</a></p>
+</body>
 </html>
