@@ -11,5 +11,6 @@
     </ul>
     <p><a href="1/index.php">oppgave 1</a></p>
     <p><a href="2/index.php">oppgave 2</a></p>
+    <p><a href="3/index.php">oppgave 3</a></p>
 </body>
 </html>
