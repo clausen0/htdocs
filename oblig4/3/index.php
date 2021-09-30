@@ -12,16 +12,18 @@
         
         <form action="index.php" method="POST">
             <input  tpye="text" name="name"><br>
-            <input type="radio" name="number" value="1">1
-            <input type="radio" name="number" value="5">5
-            <input type="radio" name="number" value="10">10<br>
+                <select name="values" id="values">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
             <input type="submit" value="send inn">
         </form>
 
         <?php
-            if(isset($_POST["name"]) && isset($_POST["number"])){
+            if(isset($_POST["name"]) && isset($_POST["values"])){
                 $navn = $_POST["name"];
-                $antall = $_POST["number"];
+                $antall = $_POST["values"];
 
                 for($i = 0; $i < $antall; $i++){
                     echo $navn;                            
