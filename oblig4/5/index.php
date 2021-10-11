@@ -9,23 +9,24 @@
             <li class="navbar-item"><a class="active" href="../../index.php">Forside</a></li>
             <li class="navbar-item"><a href="../index.php">tilbake</a></li>
         </ul>
-        
+
         <ol class="main">
             <li>
                 <ol class="second">
-                    <li><img src="../../img/print_r.PNG"></li>
-                    <li><img src="../../img/shuffle.PNG"></li>
-                    <li><img src="../../img/sortL-H.PNG"></li>
-                    <li><img src="../../img/sortH-L.PNG"></li>
+                    <li><img src="../../img/Oblig4(5A).PNG"></li>
                 </ol>
             </li>
         </ol>
 
-
         <?php
-        $tabell = array(1, 23, 34, 35, 54, 69, 70, 76, 83, 92);
-        rsort($tabell);
-        print_r($tabell);
+            $navn = array("Sander", "Linus", "Sebastian", "thomas", "Marius", "Tobias", "Erling", "Luan", "Jovan", "Oscar", "Syhmon", "Steinar", "Fredrik");
+            
+            /*
+            foreach($navn as $navn){
+                echo "$navn <br>";
+            }
+            */
+
         ?>
     </body>
 </html>
