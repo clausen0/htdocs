@@ -14,6 +14,6 @@
         <p><a href="3/index.php">oppgave 3</a></p>
         <p><a href="4/index.php">oppgave 4</a></p>
         <p><a href="5/index.php">oppgave 5</a></p>
-        <p><a href="6/index.php">oppgave 6</a></p>
+        <p><a href="6/index.php">oppgave 6</a></p>  
     </body>
 </html>
