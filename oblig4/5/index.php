@@ -14,6 +14,8 @@
             <li>
                 <ol class="second">
                     <li><img src="../../img/Oblig4(5A).PNG"></li>
+                    <li><img src="../../img/Oblig4(5B).PNG"></li>
+                    <li><img src="../../img/Oblig4(5C).PNG"></li>
                 </ol>
             </li>
         </ol>
@@ -24,6 +26,23 @@
             /*
             foreach($navn as $navn){
                 echo "$navn <br>";
+            }
+            */
+
+            /*
+            $teller = 0;
+            while((count($navn)-1) >= $teller){
+                echo($navn[$teller]). "<br>";
+                $teller++;
+            }
+            */
+            /*
+            $teller = 0;
+            count($navn);
+
+            for($navn >= $teller){
+                echo($navn[$teller]);
+                $teller++;
             }
             */
 
