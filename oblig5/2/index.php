@@ -10,5 +10,12 @@
             <li class="navbar-item"><a href="../index.php">tilbake</a></li>
         </ul>
 
+        <?php
+            function funksjon(){
+                echo "hei";
+            }
+            funksjon()
+        ?>
+    
     </body>
 </html>
