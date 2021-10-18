@@ -17,6 +17,7 @@
         <p><a href="oblig3/index.php">Oblig3</a></p>
         <p><a href="oblig4/index.php">Oblig4</a></p>
         <p><a href="oblig5/index.php">Oblig5</a></p>
+        <p><a href="prøve/index.php">Prøve</a></p>
         <p><a href="ekstraoppgaver/index.php">ekstraoppgaver</a></p>
     </body>
 </html>
