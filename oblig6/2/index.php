@@ -16,14 +16,13 @@
         $teller = 0;
 
         while(!feof($readFile)){
-            $liste[$teller] = fgets($readfile);
+            $liste[$teller] = fgets($readFile);
             $teller++;
         }
 
         fclose($readFile);
-        echo $liste[rand(0, count($liste)-1)];
 
-
+        echo $liste[rand(0, count($liste) - 1)];
 
         ?>
     </body>
