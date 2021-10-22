@@ -5,8 +5,8 @@
         <link rel="stylesheet" href="../../ForsideStyle.css">
         <style>
             table{
-                border-style:solid;
-                border-widht:2px;
+                text-align:center;
+                border-collapse: collapse;
             }
         </style>
     </head>
@@ -16,32 +16,42 @@
             <li class="navbar-item"><a href="../index.php">tilbake</a></li>
             <li class="navbar-item"><a href="index.php">forum</a></li>
         </ul>
-        <?php
-            if(!file_exists("karakter.txt")){
-                echo "filen finnes ikke";
-                exit;
-            }
 
-            $myFile = fopen("karakter.txt", "r");
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Poeng Sum</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    if(!file_exists("karakter.txt")){
+                        echo "filen finnes ikke";
+                        exit;
+                    }
+        
+                    $myFile = fopen("karakter.txt", "r");
+        
+                    if(!$myFile){
+                        echo "filen kan ikke åpnes";
+                        exit;
+                    }
 
-            if(!$myFile){
-                echo "filen kan ikke åpnes";
-                exit;
-            }
+                    while(!feof($myFile)) {
+                        $data = explode(';', fgets($myFile));
 
-            echo "<tabel>";
-            $teller = 1;
-
-            while(!feof($myFile)){
-                $read = fgets($myFile);
-                echo "<tr><td>$teller</td></tr>";
-                echo "<td>$read</td><br>";
-                $teller++;
-            }
-            
-            echo "</table>";
-            
-            fclose($myFile);
-        ?>
+                        if(isset($data[1])) {
+                            echo "<tr>";
+                            echo "<td>" . trim($data[0]) . "</td>";
+                            echo "<td>" . trim($data[1]) . "</td>";
+                            echo "</tr>";
+                        }
+                    }
+        
+                    fclose($myFile);
+                ?>
+            </tbody>
+        </table>
     </body>
 </html>
