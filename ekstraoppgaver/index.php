@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Document</title>
-    <link rel="../6/stylesheet" href="../ForsideStyle.css">
+    <link rel="stylesheet" href="../ForsideStyle.css">
 </head>
 <body>
     <ul class="navbar">
@@ -10,6 +10,12 @@
         <li class="navbar-item"><a href="../index.php">tilbake</a></li>
     </ul>
     <p><a href="Javascript/test.js">JS</a></p>
+    <p><img src="../img/JS-statement.PNG"></p>
+    <script>
+        alert("Er du sikker på om du vil forsette?");
+
+        console.log("Bruker logget seg inn");
+    </script>
     <?php
 
     $hello = "hei";
