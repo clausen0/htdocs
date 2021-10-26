@@ -19,7 +19,7 @@
         <p><a href="oblig5/index.php">Oblig5</a></p>
         <p><a href="oblig6/index.php">Oblig6</a></p>
         <p><a href="oop/index.php">Oop</a></p>
-        <p><a href="prøve/index.php">Prøve</a></p>
+        <p><a href="prove/index.php">Prøve</a></p>
         <p><a href="ekstraoppgaver/index.php">ekstraoppgaver</a></p>
     </body>
 </html>
