@@ -14,5 +14,7 @@
         <p><a href="2/index.php">Oppgave 2</a></p>
         <p><a href="3/index.php">Oppgave 3</a></p>
         <p><a href="4/index.php">Oppgave 4</a></p>
+        <p><a href="5/index.php">Oppgave 5</a></p>
+        <p><a href="6/index.php">Oppgave 6</a></p>
     </body>
 </html>

@@ -14,16 +14,16 @@
     $nr2 = 6;
 
         function addere($nr1, $nr2){
-            echo ($nr1 + $nr2);
+            echo ($nr1 + $nr2). "<br>";
         }
         function subtraksjon($nr1, $nr2){
-            echo ($nr1 - $nr2);
+            echo ($nr1 - $nr2). "<br>";
         }
         function deling($nr1, $nr2){
-            echo ($nr1 : $nr2);
+            echo ($nr1 / $nr2). "<br>";
         }
         function multiplikasjon($nr1, $nr2){
-            echo ($nr1 * $nr2);
+            echo ($nr1 * $nr2). "<br>";
         }
         
         addere($nr1, $nr2);
