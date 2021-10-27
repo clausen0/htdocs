@@ -1,9 +1,9 @@
 <?php
 class person{
-    var $name;
-    var $number;
-    var $age;
-    var $epost;
+    protected $name;
+    protected $number;
+    public $age;
+    public $epost;
 
     function set_name($new_name){
         $this->name = $new_name;
@@ -39,9 +39,8 @@ class person{
 }
 
 class elev extends person{
-    var $class;
-    var $kTeacher;
-    var $property
+    private $class;
+    private $kTeacher;
 
     function set_class($new_class){
         $this->class = $new_class;
@@ -51,8 +50,9 @@ class elev extends person{
         $this->kTeacher = $new_kTeacher;
     }
 
-    function __constructor($property){
-        $this->property = $property;
+    function __construct($class, $kTeacher){
+        $this->class = $class;
+        $this->kTeacher = $kTeacher;
     }
 
     function get_class(){
@@ -62,11 +62,6 @@ class elev extends person{
     function get_kTeacher(){
         return $this->kTeacher;
     }
-
-    function get_property(){
-        return $this->property;
-    }
-    ]
 }
 
 
