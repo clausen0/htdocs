@@ -11,6 +11,9 @@
     </ul>
     <p><a href="Javascript/test.js">JS</a></p>
     <p><img src="../img/JS-statement.PNG"></p>
+    <p><img src="../img/JS-operators.PNG"></p>
+    <p><img src="../img/JS-comperator.PNG"></p>
+    <p><img src="../img/JS-bitwise.PNG"></p>
     <script>
         alert("Er du sikker på om du vil forsette?");
 
