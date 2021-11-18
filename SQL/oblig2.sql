@@ -13,9 +13,12 @@ create table if not exists Authors(
     SivilStatus varchar(25)
 );
 
-insert into Authors(ForNavn, EtternNavn, Nasjonalitet, Adresse, PostNummer, PostSted, Telefon, Epost, SivilStatus) values
-    ("Joanne", "rowling", "Britisk", "", "", "", "", "", "ukjent"),
-    ("Jo", "Nesbø", "Norsk", "", "", "", "", "", "ukjent");
+INSERT INTO Authors(ForNavn, EtterNavn, Nasjonalitet, Adresse, PostNummer, Telefon, Epost, SivilStatus) values
+    ("Joanne", "rowling", "Britisk", "", "", "", "", "ukjent"),
+    ("Jo", "Nesbø", "Norsk", "", "", "", "", "ukjent"),
+    ("John Ronald", "Reuel Tolkien", "Britisk", "", "", "", "", "ukjent"),
+    ("Rick", "Riordan", "Amerikansk", "", "", "", "", "Gift"),
+    ("Suzanne", "Collins", "Amerikansk", "", "", "", "", "Gift");
 
 
 
