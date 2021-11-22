@@ -42,3 +42,7 @@ INSERT INTO Books(Tittel, Utgivelses, ISBN, ForfatterID) values
     ("Percy jackson og monsternes hav", 2006, 9788251626323, 4),
     ("Dødslekene", 2008, 9788205383982, 5),
     ("Opp i flammer", 2010, 9788205397194, 5);
+
+    select ForNavn, EtterNavn, Epost from Authors;
+
+    select 
