@@ -43,6 +43,28 @@ INSERT INTO Books(Tittel, Utgivelses, ISBN, ForfatterID) values
     ("Dødslekene", 2008, 9788205383982, 5),
     ("Opp i flammer", 2010, 9788205397194, 5);
 
-    select ForNavn, EtterNavn, Epost from Authors;
+select ForNavn, EtterNavn, Epost from Authors;
+    
+select * from books where ForfatterID = 1;
 
-    select 
+
+/*
+Søke i data: 
+d.	list ut alle forfatteres navn og epost
+e.	list ut alle bøker en gitt forfatter har skrevet (bruk forfatterens id)
+f.	list ut alle bøker en gitt forfatter har skrevet (bruk forfatterens navn)
+g.	list ut alle boktitler
+h.	list ut alle boktitler alfabetisk (intet annet)
+i.	list ut alle forfatteres navn og isbn-nummer (intet annet) motsatt alfabetisk
+
+*/
+select b.Tittel, a.ForNavn from books as b, Authors as a where a.ForNavn like "Joanne" AND b.ForfatterID = a.id;
+
+select Tittel from Books;
+
+select Tittel from books order by tittel;
+
+select Tittel, ISBN from books order by tittel;
+
+/*AND b.ForfatterID = a.id;
+*/

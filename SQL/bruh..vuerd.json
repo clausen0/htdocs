@@ -5,7 +5,7 @@
     "height": 2000,
     "scrollTop": -45,
     "scrollLeft": -133,
-    "zoomLevel": 1,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -19,7 +19,7 @@
     },
     "database": "MySQL",
     "databaseName": "oblig2",
-    "canvasType": "ERD",
+    "canvasType": "@vuerd/builtin-sql-ddl",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
@@ -235,7 +235,7 @@
           "active": false,
           "left": 197,
           "top": 99,
-          "zIndex": 1,
+          "zIndex": 142,
           "widthName": 60,
           "widthComment": 60
         },
@@ -366,7 +366,7 @@
           "active": false,
           "left": 755,
           "top": 130,
-          "zIndex": 2,
+          "zIndex": 158,
           "widthName": 60,
           "widthComment": 60
         },
