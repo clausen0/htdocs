@@ -69,3 +69,9 @@ select region from cia where region like '%e%' group by region;
 select sum(population) from cia where name like 'n%';
 
 select sum(area) from cia where population > 10000000;
+
+select name, population, area from cia where population > 1000000 and area > 10000;
+
+select count(name) from cia where name like '_______';
+
+select name from cia where population > area;
