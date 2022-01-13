@@ -22,5 +22,6 @@
         <p><a href="oop/index.php">Oop</a></p>
         <p><a href="prove/index.php">Prøve</a></p>
         <p><a href="ekstraoppgaver/index.php">ekstraoppgaver</a></p>
+        <p><a href="databaser/index.php">oblig3 databaser</a></p>
     </body>
 </html>
