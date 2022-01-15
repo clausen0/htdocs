@@ -22,7 +22,11 @@
         <p><a href="oop/index.php">Oop</a></p>
         <p><a href="prove/index.php">Prøve</a></p>
         <p><a href="ekstraoppgaver/index.php">ekstraoppgaver</a></p>
+<<<<<<< HEAD
         <p><a href="nav-test/index.html">meny</a></p>
         <p><a href="nav-test/inde.html">hamburg meny</a></p>
+=======
+        <p><a href="databaser/index.php">oblig3 databaser</a></p>
+>>>>>>> e0a218e5c963116409be073af556245a4dded566
     </body>
 </html>
