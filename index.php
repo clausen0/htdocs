@@ -22,5 +22,7 @@
         <p><a href="oop/index.php">Oop</a></p>
         <p><a href="prove/index.php">Prøve</a></p>
         <p><a href="ekstraoppgaver/index.php">ekstraoppgaver</a></p>
+        <p><a href="nav-test/index.html">meny</a></p>
+        <p><a href="nav-test/inde.html">hamburg meny</a></p>
     </body>
 </html>
