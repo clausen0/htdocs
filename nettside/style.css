@@ -1,7 +1,51 @@
-/* body {
-  background-color: #121212; 
-} */
+:root{
+  --text: #678eb6;
+  --highlight: #1269c0;
+  --backround: #121212;
+}
+
+body {
+  background-color: var(--backround); 
+  color: var(--text);
+}
 
 h1 {
   text-align: center;
+  color: var(--highlight);
+  font-size: 45px; 
+}
+
+.template{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.vare1{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30vh;
+  height: 60vh;
+  outline-style: auto;
+  outline-color: var(--highlight);
+}
+
+.vare2{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30vh;
+  height: 60vh;
+  outline-style: auto;
+  outline-color: var(--highlight);
+}
+
+.vare3{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30vh;
+  height: 60vh;
+  outline-style: auto;
+  outline-color: var(--highlight);
 }
