@@ -50,4 +50,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
+}
+
+
+.kjonn{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: 2px solid var(--highlight);
 }

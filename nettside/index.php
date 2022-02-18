@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>ValgSide</title>
     <link rel="stylesheet" href="style.css?<?=filemtime("style.css")?>">
 </head>
 
