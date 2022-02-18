@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -2,
-    "scrollLeft": -3,
+    "scrollTop": 0,
+    "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -72,13 +72,13 @@
           {
             "name": "Vare",
             "comment": "",
-            "dataType": "varchar",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -87,7 +87,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 64.6005859375,
               "widthDefault": 60
             },
             "id": "526959a2-0ab4-4527-8938-b48c29b941e4"
@@ -97,7 +97,7 @@
           "active": false,
           "left": 52,
           "top": 32,
-          "zIndex": 60,
+          "zIndex": 86,
           "widthName": 60,
           "widthComment": 60
         },
@@ -109,19 +109,19 @@
         "comment": "",
         "columns": [
           {
-            "name": "id",
+            "name": "Id",
             "comment": "",
-            "dataType": "int",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -140,7 +140,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -157,13 +157,13 @@
           {
             "name": "Epost",
             "comment": "",
-            "dataType": "Varchar",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -172,21 +172,21 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 64.6005859375,
               "widthDefault": 60
             },
             "id": "b335ac8a-0195-445f-88e3-7f5852472cf7"
           },
           {
-            "name": "nummer",
+            "name": "Nummer",
             "comment": "",
-            "dataType": "varchar",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -195,21 +195,60 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 64.6005859375,
               "widthDefault": 60
             },
             "id": "ca5ca456-eda5-40df-8820-a0e35e6f637a"
           },
           {
-            "name": "bestilling",
+            "name": "Kjønn",
             "comment": "",
-            "dataType": "int",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "02062997-b187-45e7-9c04-e106c4fb0a2d"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 56,
+          "top": 254,
+          "zIndex": 85,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "abd1d3dd-5ba7-4c71-8383-deab0fb13fe2"
+      },
+      {
+        "name": "Bestillinger",
+        "comment": "",
+        "columns": [
+          {
+            "name": "Id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -221,19 +260,88 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "a6897875-1a5a-4b44-b9f7-80529d6605e9"
+            "id": "61d22888-949f-4b34-8557-a1a0f50958d5"
+          },
+          {
+            "name": "Ordre",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "1d33c4d3-2b70-4c2b-aa3d-f716e0c89303"
+          },
+          {
+            "name": "Kunde ",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3735e9a2-84d4-4fe5-8d5f-2c2dd428ce02"
+          },
+          {
+            "name": "Vare",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "bdde76f7-6aab-4799-86b2-b5855003f96b"
           }
         ],
         "ui": {
           "active": false,
-          "left": 57,
-          "top": 253,
-          "zIndex": 63,
-          "widthName": 60,
+          "left": 521,
+          "top": 258,
+          "zIndex": 100,
+          "widthName": 65.58447265625,
           "widthComment": 60
         },
         "visible": true,
-        "id": "abd1d3dd-5ba7-4c71-8383-deab0fb13fe2"
+        "id": "de8822fc-8900-4e1d-876c-3f19486cb0eb"
       }
     ],
     "indexes": []
