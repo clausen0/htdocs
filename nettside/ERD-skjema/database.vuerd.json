@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -195,
-    "scrollLeft": -81,
-    "zoomLevel": 0.9,
+    "scrollTop": -268,
+    "scrollLeft": -213,
+    "zoomLevel": 0.7,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -186,10 +186,10 @@
           }
         ],
         "ui": {
-          "active": true,
-          "left": 1023.1089,
-          "top": 582.5555,
-          "zIndex": 197,
+          "active": false,
+          "left": 698.9421,
+          "top": 631.2449,
+          "zIndex": 36,
           "widthName": 60,
           "widthComment": 60
         },
@@ -366,7 +366,7 @@
           "active": false,
           "left": 56,
           "top": 254,
-          "zIndex": 146,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -384,13 +384,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -472,9 +472,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 558.3332,
-          "top": 283.5562,
-          "zIndex": 176,
+          "left": 711.6668,
+          "top": 281.8894,
+          "zIndex": 34,
           "widthName": 65.58447265625,
           "widthComment": 60
         },
@@ -628,12 +628,74 @@
           "active": false,
           "left": 50,
           "top": 631,
-          "zIndex": 190,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
         "id": "eef2905f-7250-488d-ad38-385554c0744d"
+      },
+      {
+        "name": "Faktura",
+        "comment": "",
+        "columns": [
+          {
+            "name": "Id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "59cf2d5b-a09f-4005-a4a4-3b0c9dbf82a6"
+          },
+          {
+            "name": "Bestilling",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "081f6bda-4fd0-4388-98d3-79b1d39021b0"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1403.9445,
+          "top": 302.0831,
+          "zIndex": 33,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "d2a7b2a8-a59c-4b5b-acc0-9a261e39feee"
       }
     ],
     "indexes": []
@@ -678,18 +740,18 @@
           "columnIds": [
             "6d2961b8-9a6e-4562-9067-c7058a291a36"
           ],
-          "x": 1023.1089,
-          "y": 630.5555,
-          "direction": "left"
+          "x": 899.948203515625,
+          "y": 631.2449,
+          "direction": "top"
         },
         "end": {
           "tableId": "de8822fc-8900-4e1d-876c-3f19486cb0eb",
           "columnIds": [
             "bd19aa06-5ea2-449f-bf51-bd02f2bc9118"
           ],
-          "x": 930.3986296875,
-          "y": 359.0562,
-          "direction": "right"
+          "x": 897.69951484375,
+          "y": 432.8894,
+          "direction": "bottom"
         },
         "constraintName": "fk_varer_to_bestillinger",
         "visible": true,
@@ -713,8 +775,8 @@
           "columnIds": [
             "7696af25-daeb-4cf6-a035-e2d9ee447f2a"
           ],
-          "x": 558.3332,
-          "y": 359.0562,
+          "x": 711.6668,
+          "y": 357.3894,
           "direction": "left"
         },
         "constraintName": "fk_personer_to_bestillinger",
@@ -739,13 +801,39 @@
           "columnIds": [
             "db8117f0-cf5c-4609-93d8-0cbf9f98a632"
           ],
-          "x": 1023.1089,
-          "y": 726.5555,
+          "x": 698.9421,
+          "y": 727.2449,
           "direction": "left"
         },
         "constraintName": "fk_firmaer_to_varer",
         "visible": true,
         "id": "6081fb1b-d789-4416-8f62-61e7398f2991"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroOne",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "de8822fc-8900-4e1d-876c-3f19486cb0eb",
+          "columnIds": [
+            "61d22888-949f-4b34-8557-a1a0f50958d5"
+          ],
+          "x": 1083.7322296875,
+          "y": 357.3894,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "d2a7b2a8-a59c-4b5b-acc0-9a261e39feee",
+          "columnIds": [
+            "081f6bda-4fd0-4388-98d3-79b1d39021b0"
+          ],
+          "x": 1403.9445,
+          "y": 357.0831,
+          "direction": "left"
+        },
+        "constraintName": "fk_bestillinger_to_faktura",
+        "visible": true,
+        "id": "8ca0fe45-d339-4316-9fbf-68db0c1002ea"
       }
     ]
   }
