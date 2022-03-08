@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -324,
-    "scrollLeft": -487,
+    "scrollTop": -348,
+    "scrollLeft": -497,
     "zoomLevel": 0.5,
     "show": {
       "tableComment": true,
@@ -187,9 +187,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1173.3465,
-          "top": 685.253,
-          "zIndex": 73,
+          "left": 1177.3465,
+          "top": 675.253,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -474,7 +474,7 @@
           "active": false,
           "left": 614.674,
           "top": 230.0524,
-          "zIndex": 74,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -628,7 +628,7 @@
           "active": false,
           "left": 50,
           "top": 631,
-          "zIndex": 54,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
@@ -736,7 +736,7 @@
           "active": false,
           "left": 1198.1785,
           "top": 231.4363,
-          "zIndex": 71,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -795,8 +795,8 @@
           "columnIds": [
             "db8117f0-cf5c-4609-93d8-0cbf9f98a632"
           ],
-          "x": 1173.3465,
-          "y": 781.253,
+          "x": 1177.3465,
+          "y": 771.253,
           "direction": "left"
         },
         "constraintName": "fk_firmaer_to_varer",
@@ -838,8 +838,8 @@
           "columnIds": [
             "6d2961b8-9a6e-4562-9067-c7058a291a36"
           ],
-          "x": 1374.352603515625,
-          "y": 685.253,
+          "x": 1378.352603515625,
+          "y": 675.253,
           "direction": "top"
         },
         "end": {
