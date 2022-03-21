@@ -14,7 +14,7 @@
                 <label for="Navn">Navn:</label><br>
                 <input type="text" id="Navn" name="navn"><br>
                 <label for="Epost">E-post adresse:</label><br>
-                <input type="text" id="Epost" name="E-post"><br>
+                <input type="text" id="Epost" name="Epost"><br>
                 <label for="nummer">Nummer:</label><br>
                 <input type="text" id="nummer" name="Nummer"><br>
                 <label for="gender">Kjønn:</label>
@@ -39,6 +39,13 @@
         $username = "root";
         $password = "";
 
+        $name = $_POST['navn'];
+        $Epost = $_POST['Epost'];
+        $Number = $_POST['Nummer'];
+        $Gender = $_POST['gender'];
+        $Firma = $_POST['Frima'];
+        $Stilling = $_POST['Stilling'];
+
         //lager en connection med databasen
         $conn = mysqli_connect($servername, $username, $password); 
 
@@ -47,6 +54,11 @@
             die("Connection Failed: " . mysqli_connect_error());
         }
         echo "Connected Sucesfully";
+
+        $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn)
+        VALUES($name, $Epost, $Number, $Gender)";
+
+        
     ?>
 
 </body>

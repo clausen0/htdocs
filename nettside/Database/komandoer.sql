@@ -17,8 +17,8 @@ create table if not exists  `Personer`(
     `Epost` varchar(50) not null,
     `Nummer` int not null, 
     `kjønn` varchar(25) not null,
-    `stilling` varchar(50) not null,
-    `Firma_Id` int not null,
+    `stilling` varchar(50),
+    `Firma_Id` int,
     primary key(`id`),
     foreign key(`Firma_Id`) references `Firmaer`(`id`)
 );

@@ -21,6 +21,8 @@
                 <input type="text" id="nummer" name="Nummer"><br>
                 <label for="web">Nettside:</label><br>
                 <input type="text" id="web" name="web"><br>
+                <input type="radio" id="type" name="Levrandør">Levrandør
+                <input type="radio" id="type" name="Kunde">Kunde<br>
                 <input type="submit">
                 <input type="reset">
             </form>
