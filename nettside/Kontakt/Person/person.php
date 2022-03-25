@@ -8,7 +8,9 @@
 <body>
     <ul class="topnav">
         <li><a class="active" href="../../forside.php">Forside</a></li>
-        <li><a href="#news">Kontakt modul</a></li>
+        <li><a href="#news">Kontakt modul
+            
+        </a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="right"><a href="../Kontakt.php">Tilbake</a></li>
     </ul>
