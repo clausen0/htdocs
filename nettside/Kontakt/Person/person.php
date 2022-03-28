@@ -48,12 +48,17 @@
         $username = "root";
         $password = "";
 
-        $name = $_POST['navn'];
-        $Epost = $_POST['Epost'];
-        $Number = $_POST['Nummer'];
-        $Gender = $_POST['gender'];
-        $Firma = $_POST['Frima'];
-        $Stilling = $_POST['Stilling'];
+        if(isset($_POST['navn']) && isset($_POST['Epost']) && isset($_POST['Nummer']) && isset($_POST['gender']) && isset($_POST['Firma']) && isset($_POST['Stilling'])){
+            $name = $_POST['navn'];
+            $Epost = $_POST['Epost'];
+            $Number = $_POST['Nummer'];
+            $Gender = $_POST['gender'];
+            $Firma = $_POST['Frima'];
+            $Stilling = $_POST['Stilling'];    
+            
+        $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn)
+        VALUES($name, $Epost, $Number, $Gender)";
+        }
 
         //lager en connection med databasen
         $conn = mysqli_connect($servername, $username, $password); 
@@ -64,8 +69,6 @@
         }
         echo "Connected Sucesfully";
 
-        $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn)
-        VALUES($name, $Epost, $Number, $Gender)";
 
 
     ?>
