@@ -8,8 +8,14 @@
 <body>
     <ul class="topnav">
         <li><a class="active" href="./forside.php">Forside</a></li>
-        <li><a href="#news">Kontakt modul</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><div class="dropdown"><a>Kontakt modul</a>
+            <div class="dropdown-content">  
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+            </div>
+            </div>
+        </li>
     </ul>
 
     <h1 class="HovedTekst">Clausens Nettbutikk</h1>
