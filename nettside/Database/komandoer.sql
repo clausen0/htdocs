@@ -1,15 +1,16 @@
-create database `BuSy`;
+create database if not exists `BuSy`;
+
 use `BuSy`;
 
 create table if not exists `Firmaer`(
     `id` INT not null auto_increment,
-    `Navn` varchar not null,
-    `Adresse` varchar not null,
+    `Navn` VARCHAR(50) not null,
+    `Adresse` VARCHAR(50) not null,
     `Orgnummer` INT not null,
-    `Nummer` varchar not null.
-    `web` varchar not null,
+    `Nummer` VARCHAR(8) not NULL,
+    `web` VARCHAR(50) not null,
     primary key(`id`)
-)
+);
 
 create table if not exists  `Personer`(
     `id` INT not null auto_increment,

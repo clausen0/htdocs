@@ -19,7 +19,7 @@
             
     <div class="innskudd">
         <div class="forum">
-            <form action="index.php" method="post">
+            <form action="person.php" method="post">
                 <label for="Navn">Navn:</label><br>
                 <input type="text" id="Navn" name="navn"><br>
                 <label for="Epost">E-post adresse:</label><br>
@@ -53,23 +53,42 @@
             $Epost = $_POST['Epost'];
             $Number = $_POST['Nummer'];
             $Gender = $_POST['gender'];
-            $Firma = $_POST['Frima'];
+            $Firma = $_POST['Firma'];
             $Stilling = $_POST['Stilling'];    
             
-        $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn)
-        VALUES($name, $Epost, $Number, $Gender)";
+            // //lager en connection med databasen
+            // $conn = mysqli_connect($servername, $username, $password, 'BuSy'); 
+            
+            // //sjekker forbinnelsen med serveren
+            // if(!$conn){
+            //     die("Connection Failed: " . mysqli_connect_error());
+            // }
+            // echo "Connected Sucesfully";
+            
+            // $sql = 'INSERT INTO personer (Navn, Epost, Nummer, kjønn)
+            // VALUES($name, $Epost, $Number, $Gender)';
+    
+            // $conn->query($sql);
+            
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, 'BuSy');
+            // Check connection
+            if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $sql = "INSERT INTO MyGuests (Navn, Epost, Nummer, kjønn)
+            VALUES ($name, $Epost, $Number, $Gender)";
+
+            if (mysqli_query($conn, $sql)) {
+            echo "New record created successfully";
+            } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+
+            mysqli_close($conn);
         }
-
-        //lager en connection med databasen
-        $conn = mysqli_connect($servername, $username, $password); 
-
-        //sjekker forbinnelsen med serveren
-        if(!$conn){
-            die("Connection Failed: " . mysqli_connect_error());
-        }
-        echo "Connected Sucesfully";
-
-
+        
 
     ?>
 
