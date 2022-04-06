@@ -50,28 +50,33 @@
     $username = "root";
     $password = "";
 
-    if (isset($_POST['navn']) && isset($_POST['Epost']) && isset($_POST['Nummer']) && isset($_POST['gender']) && isset($_POST['Firma']) && isset($_POST['Stilling'])) {
-        $name = $_POST['navn'];
-        $Epost = $_POST['Epost'];
-        $Number = $_POST['Nummer'];
-        $Gender = $_POST['gender'];
-        $Firma = $_POST['Firma'];
-        $Stilling = $_POST['Stilling'];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { //sjekker om metoden for requesten er post og ikke get.
+        if (isset($_POST['navn']) && isset($_POST['Epost']) && isset($_POST['Nummer']) && isset($_POST['gender']) && isset($_POST['Firma']) && isset($_POST['Stilling'])) {
+            $name = $_POST['navn'];
+            $Epost = $_POST['Epost'];
+            $Number = $_POST['Nummer'];
+            $Gender = $_POST['gender'];
+            $Firma = $_POST['Firma'];
+            $Stilling = $_POST['Stilling'];
 
-        //lager en connection med databasen
-        $conn = mysqli_connect($servername, $username, $password, 'BuSy');
+            //lager en connection med databasen
+            $conn = mysqli_connect($servername, $username, $password, 'BuSy');
 
-        //sjekker forbinnelsen med serveren
-        if (!$conn) {
-            die("Connection Failed: " . mysqli_connect_error());
+            //sjekker forbinnelsen med serveren
+            if (!$conn) {
+                die("Connection Failed: " . mysqli_connect_error());
+            }
+            echo "Connected Sucesfully";
+
+            $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn)
+                VALUES('$name', '$Epost', $Number, '$Gender')";
+
+            echo $sql;
+
+            $conn->query($sql);
         }
-        echo "Connected Sucesfully";
-
-        $sql = 'INSERT INTO personer (Navn, Epost, Nummer, kjønn)
-            VALUES($name, $Epost, $Number, $Gender)';
-
-        $conn->query($sql);
     }
+
 
 
     ?>
