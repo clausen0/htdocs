@@ -13,6 +13,12 @@
 	box-sizing: border-box;
 }
 
+h2{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 ul.topnav {
   list-style-type: none;
   margin: 0;
@@ -117,3 +123,22 @@ h1 {
   text-align: center;
   border: 2px solid var(--highlight);
 } */
+
+
+.personer{
+  display: flex;
+  float: left;
+  justify-content: left;
+  align-items: center;
+  width: auto;
+  margin: 100px;
+}
+
+.firmaer{
+  display: flex;
+  float: right;
+  justify-content: right;
+  align-items: center;
+  width: auto;
+  margin: 100px;
+}

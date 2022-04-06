@@ -16,6 +16,7 @@
     </ul>
     <h1 class="HovedTekst">Clausens Nettbutikk</h1>
 
+
     <div class="innskudd">
         <div class="forum">
             <form action="Firma.php" method="post">
@@ -35,43 +36,6 @@
             </form>
         </div>
     </div>
-
-    <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") { //sjekker om metoden for requesten er post og ikke get.
-        if (isset($_POST['Navn']) && isset($_POST['Adresse']) && isset($_POST['OrgNummer']) && isset($_POST['Nummer']) && isset($_POST['Web'])) {
-            $name = $_POST['Navn'];
-            $Adress = $_POST['Adresse'];
-            $OrgNumber = $_POST['OrgNummer'];
-            $Number = $_POST['Nummer'];
-            $Web = $_POST['Web'];
-            $Customer = isset($_POST['KundeType']) ? 1 : 0;
-
-
-
-            //lager en connection med databasen
-            $conn = new mysqli($servername, $username, $password, `BuSy`);
-
-            //sjekker forbinnelsen med serveren
-            if ($conn->connect_error) {
-                die("Connection Failed: " . $conn->connect_error);
-            }
-            echo "Connected Sucesfully", "<br>";
-
-            $sql = "INSERT INTO firmaer (Navn, Adresse, Orgnummer, Nummer, web, KundeType)
-                VALUES('$name', '$Adress', '$OrgNumber', '$Number', '$Web', '$Customer')";
-
-            echo $sql;
-
-            $conn->query($sql);
-        }
-    }
-
-    ?>
-
 </body>
 
 </html>
