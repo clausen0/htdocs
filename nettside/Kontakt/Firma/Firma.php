@@ -21,7 +21,7 @@
         <div class="forum">
             <form action="Firma.php" method="post">
                 <label for="Navn">Navn:</label><br>
-                <input type="text" id="Navn" name="navn"><br>
+                <input type="text" id="Navn" name="Navn"><br>
                 <label for="Adresse">Adresse:</label><br>
                 <input type="text" id="Adresse" name="Adresse"><br>
                 <label for="OrgNummer">OrgNummer:</label><br>
@@ -30,7 +30,7 @@
                 <input type="text" id="Nummer" name="Nummer"><br>
                 <label for="web">Nettside:</label><br>
                 <input type="text" id="Web" name="Web"><br>
-                <input type="radio" id="KundeType" name="KundeType">Levrandør<br>
+                <input type="checkbox" id="KundeType" name="KundeType">Levrandør<br>
                 <input type="submit">
                 <input type="reset">
             </form>
@@ -42,21 +42,23 @@
     $username = "root";
     $password = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST['Navn']) && isset($_POST['Adresse']) && isset($_POST['OrgNummer']) && isset($_POST['Nummer']) && isset($_POST['Web']) && isset($_POST['KundeType'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { //sjekker om metoden for requesten er post og ikke get.
+        if (isset($_POST['Navn']) && isset($_POST['Adresse']) && isset($_POST['OrgNummer']) && isset($_POST['Nummer']) && isset($_POST['Web'])) {
             $name = $_POST['Navn'];
             $Adress = $_POST['Adresse'];
             $OrgNumber = $_POST['OrgNummer'];
             $Number = $_POST['Nummer'];
             $Web = $_POST['Web'];
-            $Customer = $_POST['KundeType'];
+            $Customer = isset($_POST['KundeType']) ? 1 : 0;
+
+
 
             //lager en connection med databasen
-            $conn = mysqli_connect($servername, $username, $password);
+            $conn = new mysqli($servername, $username, $password, `BuSy`);
 
             //sjekker forbinnelsen med serveren
-            if (!$conn) {
-                die("Connection Failed: " . mysqli_connect_error());
+            if ($conn->connect_error) {
+                die("Connection Failed: " . $conn->connect_error);
             }
             echo "Connected Sucesfully";
 

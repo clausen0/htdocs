@@ -60,11 +60,11 @@
             $Stilling = $_POST['Stilling'];
 
             //lager en connection med databasen
-            $conn = mysqli_connect($servername, $username, $password, 'BuSy');
+            $conn = new mysqli($servername, $username, $password, 'BuSy');
 
             //sjekker forbinnelsen med serveren
-            if (!$conn) {
-                die("Connection Failed: " . mysqli_connect_error());
+            if ($conn->connect_error) {
+                die("Connection Failed: " . $conn->connect_error);
             }
             echo "Connected Sucesfully";
 
