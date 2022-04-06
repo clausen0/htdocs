@@ -32,6 +32,9 @@
     </div>
 
     <?php
+
+    use LDAP\Result;
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -53,19 +56,24 @@
         // $sql = "SELECT * FROM personer WHERE `Navn` LIKE `%$Persons%`";
         $sql = "SELECT * FROM personer";
 
-        $results = $conn->query($sql);
+        //mulig feilen ligger her
+        // $results = $conn->query($sql);
+        $results = mysqli_query($conn, $sql);
 
         echo $sql, "<br>";
-        if (!empty($result->num_rows) && $result->num_rows > 0) { //sjekker om det er tomt i results. Hvis det er det kommer en feilmelding. Vært et problem mens jeg lagde koden
-            if ($results->num_rows > 0) {
-                //lage kode for å sjekke eter søke feltet
-                echo "id: " . $row["id"] . " - Navn: " . $row["Navn"] . "<br>" . " - Epost" . $row["Epost"] . "<br>" . " - Nummer" . $row["Nummer"] . "<br>" . " - kjønn" . $rows["kjønn"];
-            } else {
-                echo "0 results";
-            }
+        // echo $results;
+        // echo $results->fetch_all();
+
+        // if (!empty($results->num_rows) && $results->num_rows > 0) { //sjekker om det er tomt i results. Hvis det er det kommer en feilmelding. Vært et problem mens jeg lagde koden
+        if ($results->num_rows > 0) {
+            //lage kode for å sjekke eter søke feltet
+            echo "id: " . $row["id"] . " - Navn: " . $row["Navn"] . "<br>" . " - Epost" . $row["Epost"] . "<br>" . " - Nummer" . $row["Nummer"] . "<br>" . " - kjønn" . $rows["kjønn"];
         } else {
-            echo "feil";
+            echo "0 results";
         }
+        //     } else {
+        //         echo "feil";
+        //     }
     }
 
     ?>
