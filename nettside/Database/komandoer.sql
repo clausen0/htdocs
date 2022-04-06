@@ -9,6 +9,7 @@ create table if not exists `Firmaer`(
     `Orgnummer` INT not null,
     `Nummer` VARCHAR(8) not NULL,
     `web` VARCHAR(50) not null,
+    `KundeType` VARCHAR(50) not null,
     primary key(`id`)
 );
 
