@@ -68,6 +68,8 @@
             }
             echo "Connected Sucesfully";
 
+            //legge inn kode for å samenligne fra firma tabell for å legge inn firma
+
             $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn)
                 VALUES('$name', '$Epost', $Number, '$Gender')";
 
