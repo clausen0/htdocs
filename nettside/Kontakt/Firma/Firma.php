@@ -40,6 +40,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
+    $db = "BuSy";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") { //sjekker om metoden for requesten er post og ikke get.
         if (isset($_POST['Navn']) && isset($_POST['Adresse']) && isset($_POST['OrgNummer']) && isset($_POST['Nummer']) && isset($_POST['Web'])) {
@@ -53,7 +54,7 @@
 
 
             //lager en connection med databasen
-            $conn = new mysqli($servername, $username, $password, `BuSy`);
+            $conn = new mysqli($servername, $username, $password, $db);
 
             //sjekker forbinnelsen med serveren
             if ($conn->connect_error) {
