@@ -30,13 +30,25 @@
                 <input type="text" id="nummer" name="Nummer"><br>
                 <label for="gender">Kjønn:</label>
                 <div class="kjonn">
-                    <input type="radio" id="gender" name="gender">Mann
-                    <input type="radio" id="gender" name="gender">Kvinne
-                    <input type="radio" id="gender" name="gender">Annet
+                    <input type="radio" id="gender" name="gender" value="Mann">Mann
+                    <input type="radio" id="gender" name="gender" value="Kvinne">Kvinne
+                    <input type="radio" id="gender" name="gender" value="Annet">Annet
                 </div><br>
                 <h2>Jobber Du i et firma?</h2>
                 <label for="Firma">Firma:</label><br>
-                <input type="text" id="Firma" name="Firma"><br>
+                <select name="Firma" id="Firma">
+                    <option selected value="0">Ingen firma</option>
+                    <?php
+                        $SQL = new mysqli("localhost", "root", "", "busy");
+                        if ($SQL->connect_error) die("Connection Failed: " . $conn->connect_error);
+                        $res = $SQL->query("SELECT `id`, `Navn` FROM firmaer ORDER BY `Navn`;");
+                        if($res->num_rows > 0) {
+                            while($row = $res->fetch_assoc()) {
+                                echo "<option value='" . $row["id"] ."'>" . $row["Navn"] . "</option>";
+                            }
+                        }
+                    ?>
+                </select><br>
                 <label for="Stilling">Stilling:</label><br>
                 <input type="text" id="Stilling" name="Stilling"><br>
                 <input type="submit">
@@ -56,8 +68,8 @@
             $Epost = $_POST['Epost'];
             $Number = $_POST['Nummer'];
             $Gender = $_POST['gender'];
-            $Firma = $_POST['Firma'];
-            $Stilling = $_POST['Stilling'];
+            $Firma = $_POST['Firma'] != 0 ? "" . $_POST['Firma'] : "NULL";
+            $Stilling = strlen($_POST['Stilling']) > 0 ? "'" . $_POST['Stilling'] . "'" : "NULL";
 
             //lager en connection med databasen
             $conn = new mysqli($servername, $username, $password, 'BuSy');
@@ -70,8 +82,8 @@
 
             //legge inn kode for å samenligne fra firma tabell for å legge inn firma
 
-            $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn)
-                VALUES('$name', '$Epost', '$Number', '$Gender')";
+            $sql = "INSERT INTO personer (Navn, Epost, Nummer, kjønn, Firma_Id, stilling)
+                VALUES('$name', '$Epost', '$Number', '$Gender', $Firma, $Stilling)";
 
             echo $sql;
 
