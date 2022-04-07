@@ -22,7 +22,7 @@ create table if not exists  `Personer`(
     `stilling` varchar(50),
     `Firma_Id` int,
     primary key(`id`),
-    foreign key(`Firma_Id`) references `Firmaer`(`id`)
+    foreign key(`Firma_Id`) references `Firmaer`(`id`) ON DELETE SET NULL
 );
 
 
