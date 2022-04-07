@@ -32,10 +32,30 @@
                 <input type="text" id="Web" name="Web"><br>
                 <input type="checkbox" id="KundeType" name="KundeType">Levrandør<br>
                 <input type="submit">
-                <input type="reset">
+                <input type="reset"><br>
+                <select>
+                <option selected value="0">Hvilket firma ønsker du å endre på?</option>
+                        <?php
+                            $SQL = new mysqli("localhost", "root", "", "busy");
+                            if ($SQL->connect_error) die("Connection Failed: " . $conn->connect_error);
+                            $res = $SQL->query("SELECT `id`, `Navn` FROM firmaer ORDER BY `Navn`;");
+                            if($res->num_rows > 0) {
+                                while($row = $res->fetch_assoc()) {
+                                    echo "<option value='" . $row["id"] ."'>" . $row["Navn"] . "</option>";
+                                }
+                            }
+                        ?>
+                    </select>
             </form>
         </div>
     </div>
+
+    <?php
+        $sql = new mysqli("localhost", "root", "", "busy");
+        if ($sql->connect_error) die("Connection Failed: " . $conn->connect_error);
+
+        // if(){}
+    ?>
 </body>
 
 </html>
