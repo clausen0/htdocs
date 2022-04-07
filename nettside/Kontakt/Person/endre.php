@@ -21,7 +21,19 @@
         <div class="forum">
             <form action="person.php" method="post">
                 <label for="Navn">Navn:</label><br>
-                <input type="text" id="Navn" name="navn"><br>
+                <select>
+                <option selected value="0">Hvem vil du endre på?</option>
+                    <?php
+                        $SQL = new mysqli("localhost", "root", "", "busy");
+                        if ($SQL->connect_error) die("Connection Failed: " . $conn->connect_error);
+                        $res = $SQL->query("SELECT `id`, `Navn` FROM personer ORDER BY `Navn`;");
+                        if($res->num_rows > 0) {
+                            while($row = $res->fetch_assoc()) {
+                                echo "<option value='" . $row["id"] ."'>" . $row["Navn"] . "</option>";
+                            }
+                        }
+                    ?>
+                </select><br>
                 <label for="Epost">E-post adresse:</label><br>
                 <input type="text" id="Epost" name="Epost"><br>
                 <label for="nummer">Nummer:</label><br>
@@ -61,7 +73,7 @@
             }
             echo "Connected Sucesfully";
 
-            // $sql = "UPDATE personer ";
+            $sql = "UPDATE personer ";
         }
     }
     ?>
