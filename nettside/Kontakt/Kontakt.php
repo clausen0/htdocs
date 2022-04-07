@@ -21,7 +21,9 @@
         <p><a href="./Person/person.php">Person</a></p>
         <p><a href="./Firma/Firma.php">Firma</a></p>
         <p><a href="./Person/endre.php"> Endringer til en person?</a></p>
+        <p><a href="./Person/slett.php"> Slette noen??</a></p>
         <p><a href="./Firma/endre.php"> Endringer til et Firma?</a></p>
+        <p><a href="./Firma/slett.php"> Slette et firma?</a></p>
         <p><a href="./info/info.php">Ønsker du å finne noe imrofasjon om personer eller firma?</a></p>
     </div>
 </body>
