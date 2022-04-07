@@ -37,14 +37,14 @@
     $username = "root";
     $password = "";
 
+    $Persons = isset($_POST['Persons']) ? $_POST['Persons'] : null;
+    $Firm = isset($_POST['firmaer']) ? $_POST['firmaer'] : null;
+    echo $Firm;
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $Persons = $_POST['Persons'];
-        // $Firm = $_POST['firmaer'];
-
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && ($Persons != null || $Firm != null)) {
 
         //lager en conection til databasen
-        $conn = new mysqli($servername, $username, $password, `busy`);
+        $conn = new mysqli($servername, $username, $password, "busy");
 
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -52,22 +52,29 @@
         echo "Connected Sucesfully", "<br>";
 
         // $sql = "SELECT * FROM personer WHERE `Navn` LIKE `%$Persons%`";
-        $sql = "SELECT * FROM busy.personer WHERE 'Navn' like '%$Persons%'";
+        $sql = "SELECT * FROM personer WHERE `Navn` like '%$Persons%'";
+        $sql2 = "SELECT * FROM firmaer WHERE `Navn` like '%$Firm%'";
 
-        //mulig feilen ligger her
-        $results = $conn->query($sql);
+        $results = $conn->query($Persons != null ? $sql : $sql2);
         echo mysqli_error($conn);
         // $results = mysqli_query($conn, $sql);
 
         echo $sql, "<br>";
+        echo $sql2, "<br>";
         // echo $results;
-        // echo $results->fetch_all();
+        // print_r($results->fetch_all());
 
         // if (!empty($results->num_rows) && $results->num_rows > 0) { //sjekker om det er tomt i results. Hvis det er det kommer en feilmelding. Vært et problem mens jeg lagde koden
         if ($results) {
             //lage kode for å sjekke eter søke feltet
-            while ($row = $results->fetch_assoc()) {
-                echo "id: " . $row["id"] . " - Navn: " . $row["Navn"] . "<br>" . " - Epost: " . $row["Epost"] . "<br>" . " - Nummer: " . $row["Nummer"] . "<br>" . " - kjønn: " . $row["kjønn"];
+            if($Persons != null) {
+                while ($row = $results->fetch_assoc()) {
+                    echo "id: " . $row["id"] . "<br>" . " - Navn: " . $row["Navn"] . "<br>" . " - Epost: " . $row["Epost"] . "<br>" . " - Nummer: " . $row["Nummer"] . "<br>" . " - kjønn: " . $row["kjønn"] . "<br>";
+                }
+            } else {
+                while ($row = $results->fetch_assoc()) {
+                    echo "id: " . $row["id"] . "<br>" . " - Navn: " . $row["Navn"] . "<br>" . " - Adresse: " . $row["Adresse"] . "<br>" . " - Orgnummer: " . $row["Orgnummer"] . "<br>" . " - Web: " . $row["web"] . "<br>";
+                }
             }
         } else {
             echo "0 results";
