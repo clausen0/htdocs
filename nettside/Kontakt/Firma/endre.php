@@ -14,7 +14,7 @@
         <li><a href="#contact">Contact</a></li>
         <li class="right"><a href="../Kontakt.php">Tilbake</a></li>
     </ul>
-    <h1 class="HovedTekst">Clausens Nettbutikk</h1>
+    <!-- <h1 class="HovedTekst">Clausens Nettbutikk</h1> -->
 
 
     <div class="innskudd">
@@ -54,7 +54,16 @@
         $sql = new mysqli("localhost", "root", "", "busy");
         if ($sql->connect_error) die("Connection Failed: " . $conn->connect_error);
 
-        // if(){}
+        if(isset($_POST["Navn"]) && isset($_POST["Adresse"]) && isset($_POST["OrgNummer"]) && isset($_POST["Nummer"]) && isset($_POST["Web"]) && isset($_POST["KundeType"])){
+            $name = $_POST["Navn"];
+            $Adress = $_POST["Adresse"];
+            $ORG = $_POST["OrgNummer"];
+            $Number = $_POST["Nummer"];
+            $Site = $_POST["Web"];
+            $Customer = $_POST["KundeType"];
+
+            $sql = "UPDATE `firmaer` SET `Navn` = $name, `Adresse` = $Adress, `OrgNummer` = $ORG, `Nummer` = $Number, `web` = $Site, `KuneType` = $Customer";
+        }
     ?>
 </body>
 
