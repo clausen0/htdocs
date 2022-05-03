@@ -19,7 +19,7 @@
 
     <div class="innskudd">
         <div class="forum">
-            <form action="Firma.php" method="post">
+            <form action="endre.php" method="post">
                 <label for="Navn">Navn:</label><br>
                 <input type="text" id="Navn" name="Navn"><br>
                 <label for="Adresse">Adresse:</label><br>
@@ -62,7 +62,7 @@
             $Site = $_POST["Web"];
             $Customer = $_POST["KundeType"];
 
-            $sql = "UPDATE `firmaer` SET `Navn` = $name, `Adresse` = $Adress, `OrgNummer` = $ORG, `Nummer` = $Number, `web` = $Site, `KuneType` = $Customer";
+            $sql = "UPDATE `firmaer` where `Navn` = $res SET `Navn` = $name, `Adresse` = $Adress, `OrgNummer` = $ORG, `Nummer` = $Number, `web` = $Site, `KuneType` = $Customer";
         }
     ?>
 </body>
