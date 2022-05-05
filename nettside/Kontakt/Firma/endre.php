@@ -5,6 +5,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../style.css?<?= filemtime("../../style.css") ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require '../../query.php' ?>
 </head>
 
 <body>
@@ -22,47 +23,52 @@
             <form action="endre.php" method="post">
                 <label for="Navn">Navn:</label><br>
                 <input type="text" id="Navn" name="Navn"><br>
+
                 <label for="Adresse">Adresse:</label><br>
                 <input type="text" id="Adresse" name="Adresse"><br>
+
                 <label for="OrgNummer">OrgNummer:</label><br>
                 <input type="text" id="OrgNummer" name="OrgNummer"><br>
+
                 <label for="nummer">Nummer:</label><br>
                 <input type="text" id="Nummer" name="Nummer"><br>
+
                 <label for="web">Nettside:</label><br>
                 <input type="text" id="Web" name="Web"><br>
+
                 <input type="checkbox" id="KundeType" name="KundeType">Levrandør<br>
-                <input type="submit">
-                <input type="reset"><br>
-                <select>
-                <option selected value="0">Hvilket firma ønsker du å endre på?</option>
-                        <?php
-                            $SQL = new mysqli("localhost", "root", "", "busy");
-                            if ($SQL->connect_error) die("Connection Failed: " . $conn->connect_error);
-                            $res = $SQL->query("SELECT `id`, `Navn` FROM firmaer ORDER BY `Navn`;");
-                            if($res->num_rows > 0) {
-                                while($row = $res->fetch_assoc()) {
-                                    echo "<option value='" . $row["id"] ."'>" . $row["Navn"] . "</option>";
-                                }
+
+                <select name="Firma">
+                    <option selected value="0">Hvilket firma ønsker du å endre på?</option>
+                    <?php
+                        $res = $SQL->query("SELECT `id`, `Navn` FROM firmaer ORDER BY `Navn`;");
+                        if($res->num_rows > 0) {
+                            while($row = $res->fetch_assoc()) {
+                                echo "<option value='" . $row["id"] ."'>" . $row["Navn"] . "</option>";
                             }
-                        ?>
-                    </select>
+                        }
+                    ?>
+                </select></br>
+
+                <input type="submit">
+                <input type="reset">
             </form>
         </div>
     </div>
 
     <?php
-        $sql = new mysqli("localhost", "root", "", "busy");
-        if ($sql->connect_error) die("Connection Failed: " . $conn->connect_error);
-
-        if(isset($_POST["Navn"]) && isset($_POST["Adresse"]) && isset($_POST["OrgNummer"]) && isset($_POST["Nummer"]) && isset($_POST["Web"]) && isset($_POST["KundeType"])){
+        print_r($_POST);
+        if(isset($_POST["Navn"]) && isset($_POST["Adresse"]) && isset($_POST["OrgNummer"]) && isset($_POST["Nummer"]) && isset($_POST["Web"]) && isset($_POST["Firma"])){
             $name = $_POST["Navn"];
             $Adress = $_POST["Adresse"];
             $ORG = $_POST["OrgNummer"];
             $Number = $_POST["Nummer"];
             $Site = $_POST["Web"];
-            $Customer = $_POST["KundeType"];
+            $Customer = isset($_POST["KundeType"]) ? 1 : 0;
+            $Firma = $_POST["Firma"];
 
-            $sql = "UPDATE `firmaer` where `Navn` = $res SET `Navn` = $name, `Adresse` = $Adress, `OrgNummer` = $ORG, `Nummer` = $Number, `web` = $Site, `KuneType` = $Customer";
+            $sql = "UPDATE `firmaer` SET `Navn` = '$name', `Adresse` = '$Adress', `OrgNummer` = $ORG, `Nummer` = '$Number', `web` = '$Site', `KundeType` = '$Customer' WHERE `id` = $Firma";
+            $SQL->query($sql);
         }
     ?>
 </body>
