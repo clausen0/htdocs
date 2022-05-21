@@ -142,3 +142,14 @@ h1 {
   width: auto;
   margin: 100px;
 }
+
+.valg{
+  position: relative;
+    width:100px;
+    height:100px;
+    left: 25px;
+    top: 100px;
+    border-radius: 12px;
+
+    background-color: var(--highlight);
+}
